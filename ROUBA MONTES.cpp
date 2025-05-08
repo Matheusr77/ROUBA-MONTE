@@ -33,13 +33,13 @@ void empilhar (PilhaDeCartas* monte, int n, int naipe){
 }
 
 PilhaDeCartas* baralho(){
-	PilhaDeCartas* baralho=criar_pilha();
-	int naipe, numero;
-	for(naipe=0; naipe<4; naipe++){
-		for(numero=1; numero<=13; numero++){
-			
-		}
-	}
+    PilhaDeCartas* baralho = criar_pilha();
+    for(int naipe = 0; naipe < 4; naipe++){
+        for(int numero = 1; numero <= 13; numero++){
+            empilhar(baralho, numero, naipe);
+        }
+    }
+    return baralho;
 }
 
 void imprimir_monte (Jogador* j){
@@ -87,7 +87,7 @@ int main(){
 		jogador[i].monte=criar_pilha();
 	}
 	
-	printf("%s comeca.\n", jogador[0].nome); //início do jogo
+	printf("%s comeca.\n", jogador[0].nome); //inÃ­cio do jogo
 	
 	PilhaDeCartas* pilha_compra=criar_pilha();
 	
